@@ -11,23 +11,29 @@ const Navigation = () => {
           width: "100%",
         }}
       >
-        <Link style={{ padding: "20px 10px" }} to="/">
+        <Link style={{ padding: "20px 5px" }} to="/">
           Home
         </Link>
-        <Link style={{ padding: "20px 10px" }} to="/reactquery">
+        <Link style={{ padding: "20px 5px" }} to="/reactquery">
           ReactQuerySuperHeroesPage
         </Link>
-        <Link style={{ padding: "20px 10px" }} to="/normalhooks">
+        <Link style={{ padding: "20px 5px" }} to="/normalhooks">
           SuperHeroesPage
         </Link>
-        <Link style={{ padding: "20px 10px" }} to="/parallelqueries">
+        <Link style={{ padding: "20px 5px" }} to="/parallelqueries">
           ParallelQueries
         </Link>
-        <Link style={{ padding: "20px 10px" }} to="/dynamicparallelqueries">
+        <Link style={{ padding: "20px 5px" }} to="/dynamicparallelqueries">
           DynamicParallelQueries
         </Link>
-        <Link style={{ padding: "20px 10px" }} to="/dependentqueries">
+        <Link style={{ padding: "20px 5px" }} to="/dependentqueries">
           DependentQueries
+        </Link>
+        <Link style={{ padding: "20px 5px" }} to="/paginatedqueries">
+          PaginatedQueries
+        </Link>
+        <Link style={{ padding: "20px 5px" }} to="/infinitequeries">
+          InfiniteQueries
         </Link>
       </div>
       <Outlet />
