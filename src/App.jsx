@@ -6,6 +6,8 @@ import RQSuperHeroesPage from "./components/RQSuperHeroes.page";
 import SuperHeroesPage from "./components/SuperHeroes.page";
 import RQIndividualHeroPage from "./components/RQIndividualHero.page";
 import ParallelQueriesPage from "./components/ParallelQueriesPage";
+import PaginatedQueriesPage from "./components/PaginatedQueriesPage";
+import InfiniteQueriesPage from "./components/InfiniteQueriesPage";
 import DynamicParallelQueriesPage from "./components/DynamicParallelQueriesPage";
 import DependentQueriesPage from "./components/DependentQueriesPage";
 import ErrorPage from "./error-page";
@@ -27,6 +29,8 @@ function App() {
           />
           <Route path="normalhooks" element={<SuperHeroesPage />} />
           <Route path="parallelqueries" element={<ParallelQueriesPage />} />
+          <Route path="paginatedqueries" element={<PaginatedQueriesPage />} />
+          <Route path="infinitequeries" element={<InfiniteQueriesPage />} />
           <Route
             path="dynamicparallelqueries"
             element={<DynamicParallelQueriesPage heroids={[1, 2]} />}
