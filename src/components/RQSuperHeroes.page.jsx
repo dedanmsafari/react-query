@@ -1,27 +1,45 @@
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import UseSuperHeros from "../hooks/useSuperHeros";
+import { Link } from "react-router-dom";
 
-const fetchData = (url) => {
-  return axios.get(url);
-};
 const RQSuperHeroesPage = () => {
-  const { data, isError, isLoading, error } = useQuery(["getHeroes"], () =>
-    fetchData(" http://localhost:4000/superheroes")
-  );
+  const onSuccess = (data) => {
+    console.log("Success fetch ", data);
+  };
+  const onError = (error) => {
+    console.log("Error fetching Data ", error);
+  };
+
+  const { data, isError, isInitialLoading, error, isFetching, refetch } =
+    UseSuperHeros({ onSuccess, onError });
+
+  console.log(isInitialLoading, isFetching);
 
   if (isError) {
-    return <h2>Error loading data,{error.message}</h2>;
+    return <span>Error: {error.message}</span>;
   }
-  if (isLoading) return <h2>Loading...</h2>;
+
+  if (isInitialLoading) {
+    return <span>Loading...</span>;
+  }
 
   return (
     <>
       <h2>Super Heroes page</h2>
+      {/* <button onClick={() => refetch()}>Fetch</button> */}
       <div>
-        {data?.data.map((d) => (
-          <div key={d.id}>{d.name}</div>
-        ))}
+        {data ? (
+          <>
+            {data.data.map((d) => (
+              <div key={d.id}>
+                <Link to={`/reactquery/${d.id}`}>{d.name}</Link>
+              </div>
+            ))}
+          </>
+        ) : (
+          <span>Not ready ...</span>
+        )}
       </div>
+      <div>{isFetching ? "Fetching..." : null}</div>
     </>
   );
 };
