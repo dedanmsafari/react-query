@@ -1,7 +1,12 @@
-import UseSuperHeros from "../hooks/useSuperHeros";
+import { useState } from "react";
+
+import UseSuperHeros, { useAddSuperHeroData } from "../hooks/useSuperHeros";
 import { Link } from "react-router-dom";
 
 const RQSuperHeroesPage = () => {
+  const [name, setName] = useState("");
+  const [alterEgo, setalterEgo] = useState("");
+
   const onSuccess = (data) => {
     console.log("Success fetch ", data);
   };
@@ -9,10 +14,16 @@ const RQSuperHeroesPage = () => {
     console.log("Error fetching Data ", error);
   };
 
+  const { mutate: addHero } = useAddSuperHeroData();
   const { data, isError, isInitialLoading, error, isFetching, refetch } =
     UseSuperHeros({ onSuccess, onError });
 
-  console.log(isInitialLoading, isFetching);
+  const handleClick = () => {
+    const addedHero = { name, alterEgo };
+    addHero(addedHero);
+    setName("");
+    setalterEgo("");
+  };
 
   if (isError) {
     return <span>Error: {error.message}</span>;
@@ -25,7 +36,24 @@ const RQSuperHeroesPage = () => {
   return (
     <>
       <h2>Super Heroes page</h2>
-      {/* <button onClick={() => refetch()}>Fetch</button> */}
+
+      <input
+        value={name}
+        placeholder="hero"
+        onChange={(e) => setName(e.target.value)}
+      />
+      <br />
+
+      <input
+        value={alterEgo}
+        placeholder="alterEgo"
+        onChange={(e) => setalterEgo(e.target.value)}
+      />
+      <br />
+      <button onClick={handleClick}>Add</button>
+      <br />
+
+      <button onClick={() => refetch()}>Fetch</button>
       <div>
         {data ? (
           <>
