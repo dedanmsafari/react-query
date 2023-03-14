@@ -7,18 +7,27 @@ const Navigation = () => {
         style={{
           padding: "30px ",
           marginBottom: "35px",
-          backgroundColor: "gray",
+          backgroundColor: "royalblue",
           width: "100%",
         }}
       >
-        <Link style={{ padding: "20px 55px" }} to="/">
+        <Link style={{ padding: "20px 10px" }} to="/">
           Home
         </Link>
-        <Link style={{ padding: "20px 55px" }} to="/reactquery">
+        <Link style={{ padding: "20px 10px" }} to="/reactquery">
           ReactQuerySuperHeroesPage
         </Link>
-        <Link style={{ padding: "20px 55px" }} to="/normalhooks">
+        <Link style={{ padding: "20px 10px" }} to="/normalhooks">
           SuperHeroesPage
+        </Link>
+        <Link style={{ padding: "20px 10px" }} to="/parallelqueries">
+          ParallelQueries
+        </Link>
+        <Link style={{ padding: "20px 10px" }} to="/dynamicparallelqueries">
+          DynamicParallelQueries
+        </Link>
+        <Link style={{ padding: "20px 10px" }} to="/dependentqueries">
+          DependentQueries
         </Link>
       </div>
       <Outlet />
