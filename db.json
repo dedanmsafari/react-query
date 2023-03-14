@@ -14,6 +14,33 @@
       "id": 3,
       "name": "Wonder Woman",
       "alterEgo": "Princess Diana"
+    },
+    {
+      "id": 4,
+      "name": "The Flash",
+      "alterEgo": "Barry Allen"
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Octopus Prime"
+    },
+    {
+      "id": 2,
+      "name": "Rainbow Dog"
+    },
+    {
+      "id": 3,
+      "name": "Wonder Woman",
+      "alterEgo": "Flying Pan"
+    }
+  ],
+  "users": [{ "id": "dedan@gmail.com", "channelId": "codevolution" }],
+  "channels": [
+    {
+      "id": "codevolution",
+      "courses": ["react", "vue", "angular"]
     }
   ]
 }
