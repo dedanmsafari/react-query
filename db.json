@@ -19,6 +19,26 @@
       "id": 4,
       "name": "The Flash",
       "alterEgo": "Barry Allen"
+    },
+    {
+      "name": "Games",
+      "alterEgo": "Walter Makena",
+      "id": 5
+    },
+    {
+      "name": "Maseno",
+      "alterEgo": "Walemo",
+      "id": 6
+    },
+    {
+      "name": "WATOMO",
+      "alterEgo": "ALSERON",
+      "id": 7
+    },
+    {
+      "name": "wALTER sMITH",
+      "alterEgo": "mASTEW RUNNER",
+      "id": 8
     }
   ],
   "friends": [
@@ -36,11 +56,62 @@
       "alterEgo": "Flying Pan"
     }
   ],
-  "users": [{ "id": "dedan@gmail.com", "channelId": "codevolution" }],
+  "users": [
+    {
+      "id": "dedan@gmail.com",
+      "channelId": "codevolution"
+    }
+  ],
   "channels": [
     {
       "id": "codevolution",
-      "courses": ["react", "vue", "angular"]
+      "courses": [
+        "react",
+        "vue",
+        "angular"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "color": "red"
+    },
+    {
+      "id": 2,
+      "color": "orange"
+    },
+    {
+      "id": 3,
+      "color": "yellow"
+    },
+    {
+      "id": 4,
+      "color": "green"
+    },
+    {
+      "id": 5,
+      "color": "blue"
+    },
+    {
+      "id": 6,
+      "color": "indigo"
+    },
+    {
+      "id": 7,
+      "color": "violet"
+    },
+    {
+      "id": 8,
+      "color": "purple"
+    },
+    {
+      "id": 9,
+      "color": "black"
+    },
+    {
+      "id": 10,
+      "color": "white"
     }
   ]
 }
